@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "LoginPage";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+
+<body background="~/Content/images/background.jpg">
+    <div class="container">
+        <div class="form-horizontal ">
+            <div class="col-lg-2 col-lg-offset-10">
+                <button type="button" class="btn btn-default pull-right">Signup</button>
+            </div>
+        </div>
+        <div class="row main">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <img src="~/Content/images/joole111.png" width="178" height="100"/>
+                   
+                    <h2>Building Product Selection Platform</h2>
+                </div>
+            </div>
+            <div class="main-login main-center">
+                
+                <form class="form-horizontal">
+
+
+                    <div class="form-group">
+                        <div class="col-lg-4 col-lg-offset-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Username or Email" />
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-4 col-lg-offset-4">
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="col-lg-2 col-lg-offset-6">
+                            <button type="button" class="btn btn-primary pull-right">Login</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#divPopup").dialog({
+                autoOpen: true,
+                title: "Sign Up Popup",
+                show: {
+                    effect: "blind",
+                    duration: "1000"
+                },
+                hide: {
+                    effect: "explode",
+                    duration: "1000"
+                }
+            });
+
+            $("#btnClickMe").click(function () {
+                $("divPopup").dialog("open");
+            });
+        });
+    </script>
+
+</body>
+</html>
